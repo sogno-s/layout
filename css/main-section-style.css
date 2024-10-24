@@ -1,0 +1,45 @@
+/* ------main section------- */
+
+main{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    height:  38rem;
+}
+
+section .section-preview{
+    height: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-preview-text{
+    height: 17rem;
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.section-preview-text p{
+    color: var(--actent-text-color);
+    text-align: center;
+    line-height: 1.5;
+}
+
+.section-preview-text .general-text{
+    font-size: var(--text-size-headers);
+    font-weight: var(--text-weight) !important;
+    letter-spacing: 2px;
+}
+
+.bold-last-word {
+    font-weight: var(--text-weight-bold);
+}
+

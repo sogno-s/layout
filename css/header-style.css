@@ -1,0 +1,37 @@
+
+/* ----------header---------- */
+
+header{
+    margin: 0 auto;
+    height: 5rem;
+    border-bottom: .2px solid var(--text-color);
+}
+
+header .container{
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+nav .container-btn{
+    display: flex;
+}
+
+.container .logo{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--color-for-status);
+}
+
+/* ----------end header---------- */
+
