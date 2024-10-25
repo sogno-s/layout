@@ -213,16 +213,13 @@
                 </div>
                 <div class="curve-container">
                     <svg class="responsive-svg" viewBox="0 0 1440 347" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                        <path id="curve"  d="M480.333 271.758C347.472 269.633 202.703 304.51 0 304.51V347H1441V0C1223.24 0 1305.86 129.682 960.667 129.682C643.639 129.682 789.74 276.705 480.333 271.758Z" fill="url(#paint0_linear_6_1)" fill-opacity="0.4"/>
+                        <path id="curve" d="M480.333 271.758C347.472 269.633 202.703 304.51 0 304.51V347H1441V0C1223.24 0 1305.86 129.682 960.667 129.682C643.639 129.682 789.74 276.705 480.333 271.758Z" fill="url(#paint0_linear_6_1)" fill-opacity="0.4"/>
                         <defs>
                             <linearGradient id="paint0_linear_6_1" x1="278.466" y1="347.443" x2="278.466" y2="-107.995" gradientUnits="userSpaceOnUse">
                                 <stop stop-color="#4B71FF" stop-opacity="0"/>
                                 <stop offset="1" stop-color="#6B89F8"/>
                             </linearGradient>
                         </defs>
-                        <!-- Интерактивные точки -->
-                        <circle class="interactive-point" cx="100" cy="100" r="10"  data-message="Сообщение 1"/>
-                        <circle class="interactive-point" cx="200" cy="200" r="10"  data-message="Сообщение 2"/>
                     </svg>
                 </div>
             </div>
@@ -249,7 +246,12 @@
         return;
     }
 
-    const points = document.querySelectorAll('.interactive-point');
+    const svgNS = "http://www.w3.org/2000/svg";
+    const points = [
+        { t: 0.25, message: "Сообщение 1" },
+        { t: 0.5, message: "Сообщение 2" },
+        { t: 0.75, message: "Сообщение 3" }
+    ];
 
     // Функция для получения координат точки на кривой
     function getPointOnCurve(path, t) {
@@ -257,21 +259,45 @@
         return { x: point.x, y: point.y };
     }
 
-    // Рассчитываем координаты точек на кривой
+    // Создаем точки и линии
     points.forEach((point, index) => {
-        const t = index / (points.length - 1); // Равномерно распределяем точки по кривой
-        const { x, y } = getPointOnCurve(curve, t);
-        point.setAttribute('cx', x);
-        point.setAttribute('cy', y);
-    });
+        const { x, y } = getPointOnCurve(curve, point.t);
 
-    // Обработка событий наведения на точки
-    // points.forEach(point => {
-    //     point.addEventListener('mouseenter', (e) => {
-    //         const message = e.target.getAttribute('data-message');
-    //         alert(message);
-    //     });
-    // });
+        // Создаем линию
+        const line = document.createElementNS(svgNS, 'line');
+        line.setAttribute('x1', x);
+        line.setAttribute('y1', y);
+        line.setAttribute('x2', x);
+        line.setAttribute('y2', y + 190);
+        line.setAttribute('stroke', '#D8E0F7');
+        document.querySelector('.responsive-svg').appendChild(line);
+
+        // Создаем точку
+        const circleGroup = document.createElementNS(svgNS, 'g');
+        circleGroup.setAttribute('filter', 'url(#filter0_d_6_27)');
+
+        const circle1 = document.createElementNS(svgNS, 'circle');
+        circle1.setAttribute('cx', x);
+        circle1.setAttribute('cy', y + 157.5);
+        circle1.setAttribute('r', '7.5');
+        circle1.setAttribute('fill', 'white');
+
+        const circle2 = document.createElementNS(svgNS, 'circle');
+        circle2.setAttribute('cx', x);
+        circle2.setAttribute('cy', y + 157.5);
+        circle2.setAttribute('r', '6.5');
+        circle2.setAttribute('stroke', '#5E80FE');
+        circle2.setAttribute('stroke-width', '2');
+
+        circleGroup.appendChild(circle1);
+        circleGroup.appendChild(circle2);
+        document.querySelector('.responsive-svg').appendChild(circleGroup);
+
+        // Добавляем обработчик событий наведения
+        circleGroup.addEventListener('mouseenter', (e) => {
+            alert(point.message);
+        });
+    });
 });
     </script>
 </body>
