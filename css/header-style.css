@@ -20,6 +20,14 @@ nav{
     display: flex;
     gap: 1.5rem;
     align-items: center;
+    font-weight: 500;
+}
+
+nav a:hover{
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--color-for-status);
+    text-shadow: 1px 1px 2px rgb(201, 209, 231);
 }
 
 nav .container-btn{

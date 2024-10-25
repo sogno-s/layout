@@ -10,3 +10,12 @@
     width: 6rem;
     height: 2rem;
 }
+
+.play-btn{
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 50%;
+    border: 1px transparent;
+    background-color: var(--base-color );
+    box-shadow: 0 0 20px 5px rgba(201, 209, 231, 0.6);
+}
