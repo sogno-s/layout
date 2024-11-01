@@ -131,14 +131,3 @@ section{
     height: 100%;
 }
 
-.interactive-point {
-    cursor: pointer;
-    
-
-    /* fill: var(--color-for-status); */
-    transition: fill 0.3s;
-}
-
-.interactive-point:hover {
-    fill: yellow;
-}
