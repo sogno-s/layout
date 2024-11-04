@@ -1,0 +1,15 @@
+.section-p{
+    height: 9rem;
+}
+
+.partners{
+    height: 100%;
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    transition: filter 0.5s ease;
+    flex-wrap: wrap;
+}
+
+    

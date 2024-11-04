@@ -8,11 +8,15 @@
     --actent-text-color: #3D4F9F;
     --color-situation: #FCFDFF;
 
+    --color-for-actient-button: #4C85FF;
+    --color-for-other-button: #ADB4D2;
+
     --text-size-default: 15px;
     --text-size-headers: 48px;
 
 
     --text-weight: 300;
+    --text-weight-medium: 300;
     --text-weight-bold: 600;
 }
 
@@ -24,7 +28,16 @@ body{
     background-color: var(--base-color);
     font-size: var(--text-size-default);
     color: var(--text-color);
-    
+}
+
+h2{
+    font-size: var(--text-size-headers);
+    font-weight: var(--text-weight-medium);
+    letter-spacing: 1px;
+}
+
+.wrapper{
+    overflow: hidden;
 }
 
 *{
