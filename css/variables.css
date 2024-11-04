@@ -1,4 +1,4 @@
-@include url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+/*@include url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');*/
 
 :root{
     --base-color: #FFFFFF;
@@ -8,7 +8,11 @@
     --actent-text-color: #3D4F9F;
     --color-situation: #FCFDFF;
 
+    --text-color-situation: #D43F3F;
+
     --color-for-actient-button: #4C85FF;
+    --color-for-red-button: #FFD7D7;
+    --color-for-blue-button: #D2E1FF;
     --color-for-other-button: #ADB4D2;
 
     --text-size-default: 15px;
