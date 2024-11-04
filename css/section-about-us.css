@@ -11,7 +11,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
+    gap: 7rem;
 }
 
 .container-for-text{
@@ -21,11 +21,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    /*gap: 1rem;*/
 }
 
 .container-for-text p:first-child{
     font-weight: var(--text-weight-bold);
+    font-size: 12px;
     letter-spacing: 2px;
 }
 
