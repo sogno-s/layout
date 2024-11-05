@@ -32,6 +32,7 @@ body{
     background-color: var(--base-color);
     font-size: var(--text-size-default);
     color: var(--text-color);
+    scroll-behavior: smooth;
 }
 
 h2{

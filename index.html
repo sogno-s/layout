@@ -19,10 +19,35 @@
 <div class="wrapper">
     <header>
         <div class="container">
+            <div class="logo"></div>
+            <nav  class="nav-desktop">
+
+
+                <a target="_blank">Home</a>
+                <a>Blog</a>
+                <a>Features</a>
+                <a>Pricing</a>
+                <a>Documentation</a>
+            </nav>
+            <nav  class="nav-desktop">
+                <a>фс</a>
+                <a>тг</a>
+                <a>x</a>
+                <a>м</a>
+                <div class="container-btn">
+                    <input class="btn" value="Get started" type="button">
+                </div>
+            </nav>
+<!--            адаптивка -->
+            <div class="burger-menu" id="burgerMenu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <div class="nav-mobile" id="navMobile">
+            <div class="close-btn" id="closeBtn">&times;</div>
             <nav>
-                <a>
-                    <div class="logo"></div>
-                </a>
                 <a target="_blank">Home</a>
                 <a>Blog</a>
                 <a>Features</a>
@@ -161,6 +186,16 @@
 </div>
 
     <script>
+
+        document.getElementById('burgerMenu').addEventListener('click', function() {
+            const navMobile = document.getElementById('navMobile');
+            navMobile.classList.toggle('active');
+        });
+        document.getElementById('closeBtn').addEventListener('click', function() {
+            const navMobile = document.getElementById('navMobile');
+            navMobile.classList.remove('active');
+        });
+
         document.querySelectorAll('.partner-icon').forEach(icon => {
     icon.addEventListener('mouseover', () => {
         icon.style.filter = 'invert(39%) sepia(81%) saturate(2230%) hue-rotate(201deg) brightness(101%) contrast(94%)';
