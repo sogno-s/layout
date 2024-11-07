@@ -1,0 +1,35 @@
+.usage{
+    height: 21rem;
+}
+
+.usage-container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.side-left{
+    background-color: var(--color-for-status);
+    color: var(--base-color);
+    /*width: 95%;*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+.side-right{
+    color: var(--color-for-status);
+    background-color: var(--color-for-blue-button);
+    height: 100%;
+    /*width: 95%;*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}

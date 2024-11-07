@@ -1,6 +1,7 @@
 .about-us{
     height: 59rem;
     background: var(--base-color);
+    position: relative;
 }
 
 .about-us-container{
@@ -89,4 +90,52 @@
     color: var(--color-for-actient-button);
     font-weight: var(--text-weight-bold);
 }
+/* clouds */
+.inverse-clouds{
+    position: absolute;
+    top: 0;
+    left: 0 ;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
 
+.inverse-cloud{
+    position: absolute;
+    z-index: 1;
+}
+
+.inverse-cloud1{
+    top: 650px;
+    left: 16%;
+    transform: scale(1.6);
+}
+
+.inverse-cloud2{
+    top: 650px;
+    left: 13%;
+    transform: scale(0.9);
+}
+
+.inverse-cloud3{
+    top: 60px;
+    left: 70%;
+    transform: scale(1.2);
+}
+.inverse-cloud4{
+    top: 150px;
+    left: 10%;
+    transform: scale(2);
+}
+
+.inverse-cloud5{
+    top: 700px;
+    left: 80%;
+    transform: scale(1.5);
+}
+
+.inverse-cloud6{
+    top: 700px;
+    left: 76%;
+    transform: scale(2);
+}
